@@ -1,0 +1,101 @@
+
+
+body{
+    background-image: url("/media/background_main.jpg");
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    max-height: 100vh;
+}
+
+
+.main-container{
+    height:65vh;
+
+}
+
+.main-container h1 {
+    font-family: 'Dancing Script', cursive;
+    position: center;
+    font-size: 50px;
+    color: #904955;
+    text-align: center;
+    margin-top:10vh;
+}
+
+.footer {
+    background:#904955;
+    opacity: 0.8;
+}
+
+.footer_Info{
+    background:#904955;
+    position:center;
+    text-align: center;
+    row-gap:20px;
+
+}
+
+.socials {
+    background:#904955;
+    position:center;
+    text-align: center;
+    row-gap:20px;
+    padding: 10px;
+}
+
+.footer_Info h2 {
+    font-family: 'Dancing Script', cursive;
+    position: center;
+    font-size:30px;
+    color: #fff;
+  
+}
+
+.footer_Info p {
+    font-family: 'Cormorant Garamond', serif;
+    position: center;
+    font-size: 15px;
+    font-weight: 100;
+    font-family: 'Playfair Display', serif;
+    color: #fff;
+
+ }
+    
+.fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 40%; 
+
+}
+  .fa:hover {
+      opacity: 0.8;
+  }
+  
+  .fa-facebook {
+    background: #67333b;
+    color: white;
+    font-size: small;
+  }
+  
+  .fa-twitter {
+    background: #67333b;
+    color: white;
+    font-size: small;
+  }
+  
+  .fa-instagram {
+    background: #67333b;
+    color: white;
+    font-size: small;
+  }
+
+  .registration-form{
+    width: 50vh;
+    margin: auto;
+    margin-top: 5vh;
+  }
+

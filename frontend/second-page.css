@@ -1,0 +1,99 @@
+
+body{   
+    background-image: url("/media/background_main.jpg");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.diary-container{
+   background-color: rgb(255, 240, 240);
+}
+
+.diary{
+    background-color: rgb(255, 240, 240);
+    width: 75vh;
+    height: 80vh;
+    border: 10px solid #904955;
+    border-radius: 10px;
+    padding: 10px'
+}
+
+.diary-content{
+    overflow-y: scroll;
+    height: 90%;
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    color: #904955;
+    background-color: rgb(255, 240, 240);
+    border: none;
+    resize: none;
+    outline: none;
+    scrollbar-color: #a84957 #ed8f8f;
+    scrollbar-width: thin;
+}
+
+/* TO DO: when the screen is smaller than 700 px make the diary be 60 vh*/
+
+
+.diary-content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.diary-content::-webkit-scrollbar-track {
+    background: #ed8f8f; 
+}
+
+.diary-content::-webkit-scrollbar-thumb {
+    background: #a84957; 
+}
+
+.diary-content::-webkit-scrollbar-thumb:hover {
+    background: #ff8d8d; 
+}
+
+.diary-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    padding: 10px;
+    border-right: 10px solid #ed8f8f;
+    background-color: rgb(255, 240, 240);
+}
+
+#add_btn{
+    background-color: #ed8f8f;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 15px;
+    color: #904955;
+    cursor: pointer;
+    outline: 3px solid #904955;
+    margin: 10px;
+}
+
+#add_btn:hover{
+    background-color: #ffbcbc;
+}
+
+#delete_btn{
+    background-color: #ed8f8f;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 15px;
+    color: #904955;
+    cursor: pointer;
+    outline: none;
+    outline: 3px solid #904955;
+    margin: 10px;
+}
+
+#delete_btn:hover{
+    background-color: #ffbcbc;
+}
