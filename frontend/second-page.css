@@ -92,7 +92,7 @@ body{
     background-color: #ffbcbc;
 }
 
-#delete_btn{
+#review_btn{
     font: 25px  'Playfair',serif;
     background-color: #ed8f8f;
     border:none;
@@ -107,7 +107,7 @@ body{
     margin-bottom:1.5rem;
 }
 
-#delete_btn:hover{
+#review_btn:hover{
     background-color: #ffbcbc;
 }
 
@@ -157,3 +157,21 @@ body h1 {
     margin-bottom:1.5rem;
 }
 
+#delete_btn {
+    font: 25px  'Playfair',serif;
+    background-color: #ffebeb;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    color: #531b25;
+    cursor: pointer;
+    outline: none;
+    outline: 3px solid #904955;
+}
+
+#delete_btn:hover{
+    background-color: #a84957;
+    color:rgb(255, 240, 240);
+    transition: 0.3s;
+    outline: 3px solid #a84957;
+}

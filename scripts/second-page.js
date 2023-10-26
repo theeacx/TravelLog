@@ -40,8 +40,15 @@ document.addEventListener("DOMContentLoaded", function () {
         
         destinationListItem.appendChild(anchor);
 
+        const deleteButton = document.createElement("button");
+        deleteButton.className = "delete-btn";
+        deleteButton.id = "delete_btn";
+        deleteButton.textContent = "Delete";
+        deleteButton.addEventListener("click", function () {
+          destinationListItem.remove();
+        });
+        destinationListItem.appendChild(deleteButton);
         destinationsList.appendChild(destinationListItem);
-        
       });
     })
     .catch((error) => {
