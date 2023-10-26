@@ -3,12 +3,15 @@ document.addEventListener('DOMContentLoaded', function() {
   fetch('/json_files/Users.json')
     .then(response => response.json())
     .then(data => {
+
       const loginButton = document.getElementById('login_btn');
       loginButton.addEventListener('click', function() {
+
         const username = document.getElementById('floatingInputUsername').value;
         const password = document.getElementById('floatingPassword').value;
         const email = document.getElementById('floatingInputEmail').value;
         authentification(data, username, password, email);
+        
       });
     })
     .catch(error => {
@@ -23,12 +26,5 @@ document.addEventListener('DOMContentLoaded', function() {
       alert('Invalid username or password');
     }
   }
-
-
-  const ptrnoi = document.getElementById('ptr_noi');
-  ptrnoi.addEventListener('click', function() {
-    window.location.href = 'second-page.html';
-
-  });
 
 });

@@ -11,6 +11,10 @@
     {
       "username": "TheaLicxandru",
       "destinations": ["Paris", "Copenhagen", "Barcelona"]
+    },
+    {
+      "username": "user",
+      "destinations": ["Paris", "Copenhagen", "Barcelona", "Madrid", "Amsterdam", "Rome"]
     }
   ]
 }
