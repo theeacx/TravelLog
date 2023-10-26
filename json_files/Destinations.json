@@ -9,7 +9,8 @@
         "Park Güell",
         "La Rambla",
         "Barri Gòtic (Gothic Quarter)"
-      ]
+      ],
+      "usernames": ["RoxanaPetrescu", "TheaLicxandru", "StefanaNistor", "user"]
     },
     {
       "name": "Madrid",
@@ -20,7 +21,8 @@
         "Royal Palace of Madrid",
         "Retiro Park",
         "Puerta del Sol"
-      ]
+      ],
+      "usernames": ["RoxanaPetrescu", "StefanaNistor", "user"]
     },
     {
       "name": "Paris",
@@ -31,7 +33,8 @@
         "Louvre Museum",
         "Notre-Dame Cathedral",
         "Champs-Élysées"
-      ]
+      ],
+      "usernames": ["TheaLicxandru", "user"]
     },
     {
       "name": "Rome",
@@ -42,7 +45,8 @@
         "Roman Forum",
         "Vatican City",
         "Trevi Fountain"
-      ]
+      ],
+      "usernames": ["StefanaNistor", "user"]
     },
     {
       "name": "Amsterdam",
@@ -53,7 +57,8 @@
         "Rijksmuseum",
         "Van Gogh Museum",
         "Amsterdam Canal Ring"
-      ]
+      ],
+      "usernames": ["RoxanaPetrescu", "TheaLicxandru", "user"]
     },
     {
       "name": "Copenhagen",
@@ -64,7 +69,8 @@
         "The Little Mermaid Statue",
         "Nyhavn",
         "Rosenborg Castle"
-      ]
+      ],
+      "usernames": ["TheaLicxandru", "user"]
     }
   ]
 }

@@ -22,6 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const user = userData.users.find(user => user.username === username && user.password === password && user.email === email);
     if (user) {
       window.location.href = 'second-page.html';
+      localStorage.setItem('user', JSON.stringify(username));
+
     } else {
       alert('Invalid username or password');
     }
