@@ -17,7 +17,8 @@ body{
     height: 80vh;
     border: 10px solid #904955;
     border-radius: 10px;
-    padding: 10px'
+    padding: 10px;
+    box-shadow: 5px 5px 5px 5px rgb(206, 176, 186);
 }
 
 .diary-content{
@@ -33,6 +34,7 @@ body{
     outline: none;
     scrollbar-color: #a84957 #ed8f8f;
     scrollbar-width: thin;
+    
 }
 
 /* TO DO: when the screen is smaller than 700 px make the diary be 60 vh*/
@@ -73,15 +75,17 @@ body{
 }
 
 #add_btn{
+    font: 25px  'Playfair',serif;
+    border:none;
     background-color: #ed8f8f;
-    border: none;
     border-radius: 5px;
     padding: 10px;
     font-size: 15px;
-    color: #904955;
+    color: #531b25;
     cursor: pointer;
     outline: 3px solid #904955;
     margin: 10px;
+    margin-bottom:1.5rem;
 }
 
 #add_btn:hover{
@@ -89,18 +93,67 @@ body{
 }
 
 #delete_btn{
+    font: 25px  'Playfair',serif;
     background-color: #ed8f8f;
-    border: none;
+    border:none;
     border-radius: 5px;
     padding: 10px;
     font-size: 15px;
-    color: #904955;
+    color: #531b25;
     cursor: pointer;
     outline: none;
     outline: 3px solid #904955;
     margin: 10px;
+    margin-bottom:1.5rem;
 }
 
 #delete_btn:hover{
     background-color: #ffbcbc;
 }
+
+.destination-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #904955;
+    background-color: rgb(255, 240, 240);
+}
+
+.destination-item:hover {
+    background-color: #ffbcbc;
+    transition: 0.3s;
+}
+
+.diary-content h2{
+    font: 30px  'Lobster', cursive;
+    font-size: 2.2rem;
+    color: #904955;
+    margin: 10px;
+}
+
+body h1 {
+    font-family: 'Dancing Script', cursive;
+    position: center;
+    font-size: 50px;
+    color: #61202b;
+    text-align: center;
+    margin-top:2.5vh;
+    margin-bottom: 1vh;
+}
+
+#logout_btn {
+    font: 25px  'Playfair',serif;
+    background-color: #ffebeb;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 15px;
+    color: #531b25;
+    cursor: pointer;
+    outline: none;
+    outline: 3px solid #904955;
+    margin-top:1vh;
+    margin-bottom:1.5rem;
+}
+

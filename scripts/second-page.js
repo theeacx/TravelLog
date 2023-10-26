@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
       );
       destinations.forEach((destination) => {
         const destinationListItem = document.createElement("li");
+        destinationListItem.className = "destination-item";
 
         const anchor = document.createElement("a");
         anchor.href = `fourth-page.html?title=${encodeURIComponent(destination.name)}&description=${encodeURIComponent(destination.description)}`;
@@ -42,5 +43,5 @@ document.addEventListener("DOMContentLoaded", function () {
       console.error("Error loading user data:", error);
     });
 
-    
+
 });
