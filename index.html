@@ -33,24 +33,24 @@
     <div class="main-container">
       <h1>Personal Travel Diary</h1>
 
-      <div class="registration-form">
+      <div class="registration-form" id="login_form">
         <div class="form-floating mb-3">
           <input
-            type="email"
+            type="text" 
             class="form-control"
-            id="floatingInput"
-            placeholder="name@example.com"
+            id="floatingInputUsername" 
+            placeholder="Username"
           />
-          <label for="floatingInput">Username</label>
+          <label for="floatingInputUsername">Username</label>
         </div>
         <div class="form-floating mb-3">
           <input
             type="email"
             class="form-control"
-            id="floatingInput"
+            id="floatingInputEmail" 
             placeholder="name@example.com"
           />
-          <label for="floatingInput">Email address</label>
+          <label for="floatingInputEmail">Email address</label>
         </div>
         <div class="form-floating">
           <input
@@ -65,12 +65,15 @@
         <button type="button" class="btn btn-outline-primary" id="login_btn">
           Log in
         </button>
+        <button type="button" class="btn btn-outline-primary" id="ptr_noi">
+          PTR NOI
+        </button>
         <p>
           Don't have an account?
           <button type="button" class="btn btn-link">Sign up now</button>
         </p>
       </div>
-    </div>
+      
 
     <div class="footer">
       <div class="footer_Info">
