@@ -29,35 +29,47 @@ body{
 }
 
 .usernameContainer{
-    /* background:#90495565; */
+    /* background:#90495592; */
     position:center;
     text-align: center;
     row-gap:20px;
     padding: 10px;
+    width: 50vh;
+    margin: auto;
+    margin-top: 1vh;
 }
 
 .emailContainer{
-    /* background:#90495565; */
+    /* background:#90495592; */
     position:center;
     text-align: center;
     row-gap:20px;
     padding: 10px;
+    width: 50vh;
+    margin: auto;
+    margin-top: 1vh;
 }
 
 .passwordContainer{
-    /* background:#90495565; */
+    /* background:#90495592; */
     position:center;
     text-align: center;
     row-gap:20px;
     padding: 10px;
+    width: 50vh;
+    margin: auto;
+    margin-top: 1vh;
 }
 
 .passwordRContainer{
-    /* background:#90495565; */
+    /* background:#90495592; */
     position:center;
     text-align: center;
     row-gap:20px;
     padding: 10px;
+    width: 50vh;
+    margin: auto;
+    margin-top: 1vh;
 }
 
 .checkboxContainer{
