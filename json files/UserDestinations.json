@@ -1,0 +1,16 @@
+{
+  "userDestinations": [
+    {
+      "username": "StefanaNistor",
+      "destinations": ["Rome", "Paris", "Madrid"]
+    },
+    {
+      "username": "PetrescuRoxana",
+      "destinations": ["Madrid", "Barcelona", "Amsterdam"]
+    },
+    {
+      "username": "TheaLicxandru",
+      "destinations": ["Paris", "Copenhagen", "Barcelona"]
+    }
+  ]
+}

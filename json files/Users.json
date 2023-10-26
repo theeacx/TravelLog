@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "username": "StefanaNistor",
+      "email": "nistorstefana@yahoo.com",
+      "password": "112233"
+    },
+    {
+      "username": "TheaLicxandru",
+      "email": "thealicxandru@yahoo.com",
+      "password": "112233"
+    },
+    {
+      "username": "RoxanaPetrescu",
+      "email": "roxanapetrescu@yahoo.com",
+      "password": "112233"
+    }
+  ]
+}

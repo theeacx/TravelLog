@@ -1,0 +1,70 @@
+{
+  "destinations": [
+    {
+      "name": "Barcelona",
+      "country": "Spain",
+      "description": "Barcelona is known for its unique architecture, including the famous Sagrada Familia. It offers beautiful beaches, vibrant nightlife, and rich cultural experiences.",
+      "topAttractions": [
+        "Sagrada Familia",
+        "Park Güell",
+        "La Rambla",
+        "Barri Gòtic (Gothic Quarter)"
+      ]
+    },
+    {
+      "name": "Madrid",
+      "country": "Spain",
+      "description": "Madrid, the capital of Spain, is famous for its art, historic sites, and lively atmosphere. It is home to world-class museums and beautiful parks.",
+      "topAttractions": [
+        "Prado Museum",
+        "Royal Palace of Madrid",
+        "Retiro Park",
+        "Puerta del Sol"
+      ]
+    },
+    {
+      "name": "Paris",
+      "country": "France",
+      "description": "Paris, the City of Light, is celebrated for its art, fashion, and gastronomy. The Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral are iconic landmarks.",
+      "topAttractions": [
+        "Eiffel Tower",
+        "Louvre Museum",
+        "Notre-Dame Cathedral",
+        "Champs-Élysées"
+      ]
+    },
+    {
+      "name": "Rome",
+      "country": "Italy",
+      "description": "Rome is a city steeped in history and culture. It's famous for its ancient ruins, including the Colosseum, Roman Forum, and the Vatican City.",
+      "topAttractions": [
+        "Colosseum",
+        "Roman Forum",
+        "Vatican City",
+        "Trevi Fountain"
+      ]
+    },
+    {
+      "name": "Amsterdam",
+      "country": "Netherlands",
+      "description": "Amsterdam is known for its picturesque canals, historic houses, and vibrant nightlife. It offers a unique blend of history and modernity.",
+      "topAttractions": [
+        "Anne Frank House",
+        "Rijksmuseum",
+        "Van Gogh Museum",
+        "Amsterdam Canal Ring"
+      ]
+    },
+    {
+      "name": "Copenhagen",
+      "country": "Denmark",
+      "description": "Copenhagen is a charming city with a rich cultural scene, historic landmarks, and a laid-back atmosphere. It's the home of Hans Christian Andersen.",
+      "topAttractions": [
+        "Tivoli Gardens",
+        "The Little Mermaid Statue",
+        "Nyhavn",
+        "Rosenborg Castle"
+      ]
+    }
+  ]
+}

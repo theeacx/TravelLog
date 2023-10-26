@@ -1,0 +1,93 @@
+{
+  "destinationReviews": 
+  [
+    {
+      "destination": "Rome",
+      "reviews": [
+        {
+          "username": "StefanaNistor",
+          "rating": 5,
+          "comment": "Rome is amazing! The history, architecture, and food are incredible."
+        },
+        {
+          "username": "LastUser",
+          "rating": 4,
+          "comment": "Enjoyed my time in Rome, especially the Colosseum."
+        }
+      ]
+    },
+    {
+      "destination": "Paris",
+      "reviews": [
+        {
+          "username": "StefanaNistor",
+          "rating": 5,
+          "comment": "Paris is the most romantic city in the world. Loved the Eiffel Tower!"
+        },
+        {
+          "username": "LastUser",
+          "rating": 4,
+          "comment": "Parisian cuisine is a treat! Notre-Dame was stunning."
+        }
+      ]
+    },
+    {
+      "destination": "Madrid",
+      "reviews": [
+        {
+          "username": "StefanaNistor",
+          "rating": 4,
+          "comment": "Madrid is lively and vibrant. The Prado Museum is a must-visit."
+        },
+        {
+          "username": "PetrescuRoxana",
+          "rating": 5,
+          "comment": "I had a blast in Madrid! The Royal Palace was spectacular."
+        }
+      ]
+    },
+    {
+      "destination": "Barcelona",
+      "reviews": [
+        {
+          "username": "PetrescuRoxana",
+          "rating": 5,
+          "comment": "Barcelona has beautiful beaches and amazing architecture."
+        },
+        {
+          "username": "LastUser",
+          "rating": 4,
+          "comment": "Barcelona's Gothic Quarter is a gem!"
+        }
+      ]
+      },
+    {
+      "destination": "Amsterdam",
+      "reviews": [
+        {
+          "username": "PetrescuRoxana",
+          "rating": 4,
+          "comment": "Amsterdam's canals and museums are fantastic."
+        },
+        {
+          "username": "LastUser",
+          "rating": 5,
+          "comment": "I loved exploring Amsterdam by bike. The Rijksmuseum is a highlight."
+        } ]
+      },
+    {
+      "destination": "Copenhagen",
+      "reviews": [
+        {
+          "username": "StefanaNistor",
+          "rating": 4,
+          "comment": "Copenhagen is charming, and Tivoli Gardens is a must-visit."
+        },
+        {
+          "username": "LastUser",
+          "rating": 4,
+          "comment": "Copenhagen's Nyhavn is postcard-perfect!"
+        } ]
+      }
+    ]
+  }
