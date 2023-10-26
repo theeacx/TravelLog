@@ -62,7 +62,6 @@ body{
 }
 
 .passwordRContainer{
-    /* background:#90495592; */
     position:center;
     text-align: center;
     row-gap:20px;
@@ -73,12 +72,16 @@ body{
 }
 
 .checkboxContainer{
-    font-family: 'Dancing Script', cursive;
-    position:center;
-    font-size: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50vh;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
     text-align: center;
     row-gap:20px;
     padding: 10px;
+    margin:auto;
 }
 
 .clearfix{

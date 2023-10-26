@@ -15,6 +15,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const user1 = localStorage.getItem("user");
   const user = user1.substring(1, user1.length - 1);
 
+  
+  const welcomeMsg= document.getElementById("welcome_msg");
+    welcomeMsg.innerHTML = `Welcome ${user} to your journal!`;
+
+
 
   fetch("/json_files/Destinations.json")
     .then((response) => response.json())
