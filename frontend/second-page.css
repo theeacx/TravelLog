@@ -53,6 +53,13 @@ body{
 .diary-content::-webkit-scrollbar-thumb:hover {
     background: #ff8d8d; 
 }
+.custom-link{
+    color: #a84957;
+    text-decoration: none;
+}
+.custom-link:hover{
+    text-decoration: underline;
+}
 
 .diary-buttons{
     display: flex;
