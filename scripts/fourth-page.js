@@ -7,7 +7,7 @@ window.onload=function(){
     let canvasHeight=canvas.height;
 
     const fruitImage=new Image();
-    fruitImage.src="fructe.png";
+    fruitImage.src="/media/fructe.png";
 
     //context.drawImage(url,x,y,width,height)
     fruitImage.onload=function(){
