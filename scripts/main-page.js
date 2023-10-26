@@ -4,6 +4,11 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(response => response.json())
     .then(data => {
 
+      const signUpButton = document.getElementById('sign_up_btn');
+      signUpButton.addEventListener('click', function() {
+        window.location.href = 'sign-up.html';
+      });
+
       const loginButton = document.getElementById('login_btn');
       loginButton.addEventListener('click', function() {
 

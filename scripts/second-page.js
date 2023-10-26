@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
         anchor.textContent = destination.name;
         
         destinationListItem.appendChild(anchor);
+
         destinationsList.appendChild(destinationListItem);
         
       });
@@ -40,4 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
     .catch((error) => {
       console.error("Error loading user data:", error);
     });
+
+    
 });
