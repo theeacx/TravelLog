@@ -26,6 +26,7 @@ body{
 .footer {
     background:#904955;
     opacity: 0.8;
+    margin-top:10vh;
 }
 
 .footer_Info{
