@@ -1,0 +1,11 @@
+body{
+    background-image: url("/media/background_main.jpg");
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    max-height: 100vh;
+}
+#photo{
+    background-color: blueviolet;
+    margin-left: 100px;
+}
