@@ -84,3 +84,10 @@ body {
     margin-left: 250px;
     height: 30px;
 }
+
+#goBack:hover {
+    background-color: #904955;
+    color: #ffebeb;
+    outline: 1px solid #904955;
+    transition: 0.3s;
+}
