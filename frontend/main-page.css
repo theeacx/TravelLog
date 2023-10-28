@@ -100,3 +100,33 @@ body{
     margin-top: 5vh;
   }
 
+  #play_btn{
+    border: 2px solid #67333b;
+    color:#fff;
+    margin-left:20px;
+  }
+
+  #play_btn:hover{
+    background-color: #67333b;
+    
+  }
+
+  #play_btn:active{
+    background-color: #904955;
+  }
+
+  #pause_btn{
+    border: 2px solid #67333b;
+    color:#fff;
+  }
+
+    #pause_btn:hover{
+        background-color: #67333b;
+    }
+
+    #pause_btn:active{
+        background-color: #904955;
+    }
+
+
+

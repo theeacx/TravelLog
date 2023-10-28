@@ -34,4 +34,34 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
+  //---------------audio api
+
+  const AudioContext = window.AudioContext || window.webkitAudioContext;
+  const audioContext = new AudioContext();
+  const audioElement = document.querySelector("audio");
+  const track = audioContext.createMediaElementSource(audioElement);
+  const playButton = document.querySelector("#play_btn");
+  const pauseButton = document.querySelector("#pause_btn");
+ 
+  function playAudio() {
+    if (audioContext.state === 'suspended') {
+      audioContext.resume();
+    }
+    track.connect(audioContext.destination);
+    audioElement.play();
+  }
+
+  playButton.addEventListener("click", function() {
+    playAudio();
+  });
+
+  function pauseAudio() {
+    audioElement.pause();
+    track.disconnect(); 
+  }
+
+  pauseButton.addEventListener("click", function() {
+    pauseAudio();
+  });
+
 });
