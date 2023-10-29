@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
         destinationListItem.className = "destination-item";
 
         const anchor = document.createElement("a");
-        anchor.href = `fourth-page.html?title=${destination.name}&description=${destination.description}&photo=${destination.photo}`;
+        anchor.href = `fourth-page.html?title=${encodeURIComponent(destination.name)}&description=${encodeURIComponent(destination.description)}&photo=${encodeURIComponent(destination.photo)}&topAttractions=${encodeURIComponent(JSON.stringify(destination.topAttractions))}`;
         anchor.className = "custom-link";
         anchor.target = "_self";
         anchor.textContent = destination.name;

@@ -22,6 +22,7 @@ window.onload=function(){
     const destinationTitle = urlParams.get("title");
     const destinationDescription = urlParams.get("description");
     const destinationImage = urlParams.get("photo");
+    const destinationTopAttractions = JSON.parse(urlParams.get("topAttractions"));
     console.log(destinationImage);
     console.log("-------------------" + destinationTitle);
 
@@ -30,6 +31,7 @@ window.onload=function(){
     const descriptionElement = document.getElementById(
       "destination-description"
     );
+    const topAttractionsElement = document.getElementById("destination-top-attractions");
     if(destinationImage){
         img.src=destinationImage;
         console.log(img.src);
@@ -51,6 +53,14 @@ window.onload=function(){
 
     if (destinationDescription) {
       descriptionElement.textContent = destinationDescription;
+    }
+    if(destinationTopAttractions){
+        //topAttractionsElement.textContent=destinationTopAttractions;
+        topAttractionsElement.innerHTML = `<p>${destinationTitle}'s top attractions are:</p><ul>`;
+        destinationTopAttractions.forEach(attraction => {
+            topAttractionsElement.innerHTML += `<li>${attraction}</li>`;
+        });
+        topAttractionsElement.innerHTML += '</ul>';
     }
     
 }
