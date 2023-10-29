@@ -19,14 +19,9 @@
     <script src="/scripts/fourth-page.js"></script>
   </head>
   <body>
-    <canvas id="photo"></canvas>
+    <canvas id="destination-photo"></canvas>
 
     <div class="div">
-      <!-- <img
-        src="https://via.placeholder.com/150"
-        alt="Image"
-        style="width: 150px; height: 150px; margin-right: 20px"
-      /> -->
       <div class="about-container">
         <h2 id="destination-heading">About the Destination</h2>
         <p id="destination-description">
@@ -34,27 +29,5 @@
         </p>
       </div>
     </div>
-
-    <script>
-      // JavaScript to update the content and title based on the clicked link
-      const urlParams = new URLSearchParams(window.location.search);
-      const destinationTitle = urlParams.get("title");
-      const destinationDescription = urlParams.get("description");
-
-      const titleElement = document.getElementById("destination-title");
-      const headingElement = document.getElementById("destination-heading");
-      const descriptionElement = document.getElementById(
-        "destination-description"
-      );
-
-      if (destinationTitle) {
-        titleElement.textContent = destinationTitle;
-        headingElement.textContent = `About ${destinationTitle}`;
-      }
-
-      if (destinationDescription) {
-        descriptionElement.textContent = destinationDescription;
-      }
-    </script>
   </body>
 </html>

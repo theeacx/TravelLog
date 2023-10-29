@@ -10,7 +10,9 @@
         "La Rambla",
         "Barri Gòtic (Gothic Quarter)"
       ],
-      "usernames": ["RoxanaPetrescu", "TheaLicxandru", "StefanaNistor", "user"]
+      "usernames": ["RoxanaPetrescu", "TheaLicxandru", "StefanaNistor", "user"],
+      "photo": "/media/barcelona.jpg"
+      
     },
     {
       "name": "Madrid",
@@ -22,7 +24,8 @@
         "Retiro Park",
         "Puerta del Sol"
       ],
-      "usernames": ["RoxanaPetrescu", "StefanaNistor", "user"]
+      "usernames": ["RoxanaPetrescu", "StefanaNistor", "user"],
+      "photo": "/media/madrid.jpg"
     },
     {
       "name": "Paris",
@@ -34,7 +37,8 @@
         "Notre-Dame Cathedral",
         "Champs-Élysées"
       ],
-      "usernames": ["TheaLicxandru", "user"]
+      "usernames": ["TheaLicxandru", "user"],
+      "photo": "/media/paris.jpg"
     },
     {
       "name": "Rome",
@@ -46,7 +50,8 @@
         "Vatican City",
         "Trevi Fountain"
       ],
-      "usernames": ["StefanaNistor", "user"]
+      "usernames": ["StefanaNistor", "user"],
+      "photo": "/media/roma.jpg"
     },
     {
       "name": "Amsterdam",
@@ -58,7 +63,8 @@
         "Van Gogh Museum",
         "Amsterdam Canal Ring"
       ],
-      "usernames": ["RoxanaPetrescu", "TheaLicxandru", "user"]
+      "usernames": ["RoxanaPetrescu", "TheaLicxandru", "user"],
+      "photo": "/media/amsterdam.jpg"
     },
     {
       "name": "Copenhagen",
@@ -70,7 +76,8 @@
         "Nyhavn",
         "Rosenborg Castle"
       ],
-      "usernames": ["TheaLicxandru", "user"]
+      "usernames": ["TheaLicxandru", "user"],
+      "photo": "/media/copenhagen.jpg"
     }
   ]
 }

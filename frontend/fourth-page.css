@@ -6,12 +6,12 @@ body{
     max-height: 100vh;
     display: flex;
 }
-#photo{
+#destination-photo{
     background-color: blueviolet;
     margin-left: 100px;
     margin-top: 100px;
     flex: 1;
-    width:700px;
+    width:750px;
     height:500px;
 }
 .div{
