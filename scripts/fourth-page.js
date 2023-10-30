@@ -53,7 +53,8 @@ fetch("/json_files/Reviews.json")
     }
 
     // Extract and display all usernames and reviews for the destination
-    const allReviewsElement = document.getElementById("other-reviews");
+    const allReviewsElement = document.getElementById("other-reviews-input"); 
+    //scz thea am schimbat asta ca aveai si clasa cu acelasi nume si creieru meu a fct scurt <3
 
     destinationReview.reviews.forEach((review) => {
       if (review.username !== user) {
@@ -64,12 +65,21 @@ fetch("/json_files/Reviews.json")
         const reviewItem = document.createElement("p");
         reviewItem.innerHTML = `<strong>${review.username}:</strong> ${review.comment}`;
         allReviewsElement.appendChild(reviewItem);
+        
+        //sa fie scrollable: 
+        allReviewsElement.style.overflow = "auto";
+        allReviewsElement.style.height = "200px";
+
       }
     });
   } else {
     console.log("Destination title or user not found.");
   }
+
+
 });
+
+
 
 // ...
 

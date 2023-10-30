@@ -136,10 +136,31 @@ body {
     text-align: left;
     margin-left: 15px;
 }
-#other-reviews{
+#other-reviews-input{
     font: 20px  'Playfair',serif;
     margin-left: 15px;
     background-color: rgb(255, 240, 240);
     color: #a84957;
     text-align: left;
+    max-height: 100px;
 }
+
+/* .other-reviews-input::-webkit-scrollbar {
+    width: 10px;
+}
+
+.other-reviews-input::-webkit-scrollbar-track {
+    background: #ed8f8f; 
+}
+
+.other-reviews-input::-webkit-scrollbar-thumb {
+    background: #a84957; 
+}
+
+.other-reviews-input::-webkit-scrollbar-thumb:hover {
+    background: #ff8d8d; 
+} */
+
+
+
+

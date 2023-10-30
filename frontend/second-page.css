@@ -92,7 +92,7 @@ body{
     background-color: #ffbcbc;
 }
 
-#review_btn{
+/* #review_btn{
     font: 25px  'Playfair',serif;
     background-color: #ed8f8f;
     border:none;
@@ -109,7 +109,7 @@ body{
 
 #review_btn:hover{
     background-color: #ffbcbc;
-}
+} */
 
 .destination-item {
     display: flex;
