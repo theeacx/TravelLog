@@ -21,38 +21,58 @@ window.onload=function(){
     // };
     // JavaScript to update the content and title based on the clicked link
     const urlParams = new URLSearchParams(window.location.search);
-    fetch("/json_files/Reviews.json")
-    .then((response) => response.json())
-    .then((data) => {
-    const destinationTitle = urlParams.get("title");
-    const user1 = localStorage.getItem("user");
-    const user = user1.substring(1, user1.length - 1);
-    console.log(destinationTitle);
-    console.log(user);
-    if (destinationTitle && user) {
-      const destinationReview = data.destinationReviews.find((review) =>
-        review.destination === destinationTitle
+    // ...
+
+fetch("/json_files/Reviews.json")
+.then((response) => response.json())
+.then((data) => {
+  const destinationTitle = urlParams.get("title");
+  const user1 = localStorage.getItem("user");
+  const user = user1.substring(1, user1.length - 1);
+  console.log(destinationTitle);
+  console.log(user);
+  if (destinationTitle && user) {
+    const destinationReview = data.destinationReviews.find((review) =>
+      review.destination === destinationTitle
+    );
+
+    if (destinationReview) {
+      const userReview = destinationReview.reviews.find(
+        (review) => review.username === user
       );
 
-      if (destinationReview) {
-        const userReview = destinationReview.reviews.find(
-          (review) => review.username === user
-        );
-
-        if (userReview) {
-          const personalReviewElement = document.getElementById("personal-review");
-          personalReviewElement.textContent = userReview.comment;
-          console.log(userReview);
-        } else {
-          console.log("User's review not found for the destination.");
-        }
+      if (userReview) {
+        const personalReviewElement = document.getElementById("personal-review");
+        personalReviewElement.textContent = userReview.comment;
+        console.log(userReview);
       } else {
-        console.log("Destination not found.");
+        console.log("User's review not found for the destination.");
       }
     } else {
-      console.log("Destination title or user not found.");
+      console.log("Destination not found.");
     }
-  });
+
+    // Extract and display all usernames and reviews for the destination
+    const allReviewsElement = document.getElementById("other-reviews");
+
+    destinationReview.reviews.forEach((review) => {
+      if (review.username !== user) {
+        // const reviewItem = document.createElement("div");
+        // reviewItem.innerHTML = `<p><strong>${review.username}:</strong> ${review.comment}</p>`;
+        // allReviewsElement.appendChild(reviewItem);
+        //allReviewsElement.textContent += `${review.username}: ${review.comment}\n`;
+        const reviewItem = document.createElement("p");
+        reviewItem.innerHTML = `<strong>${review.username}:</strong> ${review.comment}`;
+        allReviewsElement.appendChild(reviewItem);
+      }
+    });
+  } else {
+    console.log("Destination title or user not found.");
+  }
+});
+
+// ...
+
 
     const destinationTitle = urlParams.get("title");
     const destinationDescription = urlParams.get("description");

@@ -30,7 +30,7 @@ body {
     text-align: center;
     padding: 30px;
     /* margin: 20px; */
-    margin-top: 50px;
+    margin-top: 20px;
     margin-left: 50px;
     align-self: flex-start;
     border-radius: 10px;
@@ -104,7 +104,7 @@ body {
     align-self: flex-start;
     border-radius: 10px;
     border: 2px solid #a84957;
-    height: 100px;
+    height: 90px;
     width: 550px;
 }
 #review-heading{
@@ -128,10 +128,10 @@ body {
     align-self: flex-start;
     border-radius: 10px;
     border: 2px solid #a84957;
-    height: 100px;
+    height: 160px;
     width: 550px;
 }
-#other-review-heading{
+#other-reviews-heading{
     font: 20px  'Lobster', cursive;
     text-align: left;
     margin-left: 15px;

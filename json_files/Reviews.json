@@ -13,6 +13,11 @@
           "username": "TheaLicxandru",
           "rating": 4,
           "comment": "Enjoyed my time in Rome, especially the Colosseum."
+        },
+        {
+          "username": "PetrescuRoxana",
+          "rating": 5,
+          "comment": "Rome is a beautiful city. Loved the Trevi Fountain!"
         }
       ]
     },
@@ -28,6 +33,11 @@
           "username": "TheaLicxandru",
           "rating": 4,
           "comment": "Parisian cuisine is a treat! Notre-Dame was stunning."
+        },
+        {
+          "username": "PetrescuRoxana",
+          "rating": 5,
+          "comment": "I had a blast in Paris! The Louvre was spectacular."
         }
       ]
     },
@@ -43,6 +53,11 @@
           "username": "PetrescuRoxana",
           "rating": 5,
           "comment": "I had a blast in Madrid! The Royal Palace was spectacular."
+        },
+        {
+          "username": "TheaLicxandru",
+          "rating": 4,
+          "comment": "Madrid is a beautiful city. Loved the Plaza Mayor!"
         }
       ]
     },
@@ -58,6 +73,11 @@
           "username": "TheaLicxandru",
           "rating": 4,
           "comment": "Barcelona's Gothic Quarter is a gem!"
+        },
+        {
+          "username": "StefanaNistor",
+          "rating": 4,
+          "comment": "Barcelona is a great city to explore on foot."
         }
       ]
       },
@@ -73,6 +93,11 @@
           "username": "TheaLicxandru",
           "rating": 5,
           "comment": "I loved exploring Amsterdam by bike. The Rijksmuseum is a highlight."
+        },
+        {
+          "username": "StefanaNistor",
+          "rating": 4,
+          "comment": "Amsterdam is a beautiful city. Loved the Anne Frank House!"
         } ]
       },
     {
@@ -87,6 +112,11 @@
           "username": "TheaLicxandru",
           "rating": 4,
           "comment": "Copenhagen's Nyhavn is postcard-perfect!"
+        },
+        {
+          "username": "PetrescuRoxana",
+          "rating": 5,
+          "comment": "I had a blast in Copenhagen! The Little Mermaid statue was spectacular."
         } ]
       }
     ]
