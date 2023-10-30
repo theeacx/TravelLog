@@ -9,8 +9,8 @@ body {
 
 #destination-photo {
     background-color: blueviolet;
-    margin-left: 75px;
-    margin-top: 50px;
+    margin-left: 0px;
+    margin-top: 75px;
     flex: 1;
     border-radius: 10px;
 }
@@ -31,7 +31,7 @@ body {
     padding: 30px;
     /* margin: 20px; */
     margin-top: 20px;
-    margin-left: 50px;
+    margin-left: 150px;
     align-self: flex-start;
     border-radius: 10px;
     border: 2px solid #a84957;
@@ -85,7 +85,7 @@ body {
     outline: 3px solid #904955;
     margin: 10px;
     margin-top: 25px;
-    margin-left: 350px;
+    margin-left: 290px;
     height: 30px;
 }
 
@@ -100,7 +100,7 @@ body {
     color: #a84957;
     margin: 20px;
     margin-top: 15px;
-    margin-left: 50px;
+    margin-left: 150px;
     align-self: flex-start;
     border-radius: 10px;
     border: 2px solid #a84957;
@@ -124,7 +124,7 @@ body {
     color: #a84957;
     margin: 20px;
     margin-top: 15px;
-    margin-left: 50px;
+    margin-left: 150px;
     align-self: flex-start;
     border-radius: 10px;
     border: 2px solid #a84957;
