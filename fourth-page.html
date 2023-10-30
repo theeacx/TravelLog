@@ -30,7 +30,14 @@
     <script src="/scripts/fourth-page.js"></script>
   </head>
   <body>
-    <canvas id="destination-photo" width="750px" height="500px"></canvas>
+    <div id="left-side">
+      <canvas id="destination-photo" width="750px" height="500px"></canvas>
+      <div class="btnClass">
+        <button id="goBack" onclick="window.location.href='/second-page.html'">
+          Back to my destinations!
+        </button>
+      </div>
+    </div>
 
     <div class="div">
       <div class="about-container">
@@ -45,10 +52,17 @@
           </p>
         </div>
       </div>
-      <div class="btnClass">
-        <button id="goBack" onclick="window.location.href='/second-page.html'">
-          Back to my destinations!
-        </button>
+      <div class="reviews">
+        <h5 id="review-heading">My review of</h5>
+        <div id="personal-review">
+          <p>This is the default review.</p>
+        </div>
+      </div>
+      <div class="other-reviews">
+        <h5 id="other-reviews-heading">Other reviews</h5>
+        <div id="other-reviews">
+          <p>These are the default other reviews.</p>
+        </div>
       </div>
     </div>
   </body>

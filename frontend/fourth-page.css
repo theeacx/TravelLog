@@ -9,14 +9,18 @@ body {
 
 #destination-photo {
     background-color: blueviolet;
-    margin-left: 100px;
-    margin-top: 100px;
+    margin-left: 75px;
+    margin-top: 50px;
     flex: 1;
+    border-radius: 10px;
 }
 
 .div {
-    flex: 2;
-    padding: 20px;
+    margin-top: 0px;
+    height: 100vh;
+    flex: 1;
+    padding-left: 20px;
+    align-items: flex-start; /* Add this line */
 }
 
 .about-container {
@@ -25,15 +29,16 @@ body {
     color: #a84957;
     text-align: center;
     padding: 30px;
-    margin: 20px;
-    margin-top: 150px;
+    /* margin: 20px; */
+    margin-top: 50px;
     margin-left: 50px;
+    align-self: flex-start;
     border-radius: 10px;
     border: 2px solid #a84957;
     height: 400px;
     width: 550px;
-    display: flex; /* Add display: flex for child alignment */
-    flex-direction: column; /* Set flex direction to column */
+    display: flex; 
+    flex-direction: column;
 }
 #destination-heading{
     font: 30px  'Lobster', cursive;
@@ -79,7 +84,8 @@ body {
     outline: none;
     outline: 3px solid #904955;
     margin: 10px;
-    margin-left: 250px;
+    margin-top: 25px;
+    margin-left: 350px;
     height: 30px;
 }
 
@@ -88,4 +94,52 @@ body {
     color: #ffebeb;
     outline: 1px solid #904955;
     transition: 0.3s;
+}
+.reviews{
+    background-color: rgb(255, 240, 240);
+    color: #a84957;
+    margin: 20px;
+    margin-top: 15px;
+    margin-left: 50px;
+    align-self: flex-start;
+    border-radius: 10px;
+    border: 2px solid #a84957;
+    height: 100px;
+    width: 550px;
+}
+#review-heading{
+    font: 20px  'Lobster', cursive;
+    text-align: left;
+    margin-left: 15px;
+}
+#personal-review{
+    font: 20px  'Playfair',serif;
+    margin-left: 15px;
+    background-color: rgb(255, 240, 240);
+    color: #a84957;
+    text-align: left;
+}
+.other-reviews{
+    background-color: rgb(255, 240, 240);
+    color: #a84957;
+    margin: 20px;
+    margin-top: 15px;
+    margin-left: 50px;
+    align-self: flex-start;
+    border-radius: 10px;
+    border: 2px solid #a84957;
+    height: 100px;
+    width: 550px;
+}
+#other-review-heading{
+    font: 20px  'Lobster', cursive;
+    text-align: left;
+    margin-left: 15px;
+}
+#other-reviews{
+    font: 20px  'Playfair',serif;
+    margin-left: 15px;
+    background-color: rgb(255, 240, 240);
+    color: #a84957;
+    text-align: left;
 }
