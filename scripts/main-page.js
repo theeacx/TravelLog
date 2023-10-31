@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
       localStorage.setItem('user', JSON.stringify(username));
 
     } else {
-      alert('Invalid username or password');
+      alert('Invalid username or password! :(');
     }
   }
 
@@ -38,30 +38,39 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const AudioContext = window.AudioContext || window.webkitAudioContext;
   const audioContext = new AudioContext();
-  const audioElement = document.querySelector("audio");
-  const track = audioContext.createMediaElementSource(audioElement);
+  const audioSource = audioContext.createBufferSource();
+
   const playButton = document.querySelector("#play_btn");
   const pauseButton = document.querySelector("#pause_btn");
- 
-  function playAudio() {
-    if (audioContext.state === 'suspended') {
-      audioContext.resume();
-    }
-    track.connect(audioContext.destination);
-    audioElement.play();
+
+  let music = false;
+
+  function loadAudioFile() {
+    fetch('/media/pianoBackground.mp3')
+      .then(response => response.arrayBuffer())
+      .then(buffer => audioContext.decodeAudioData(buffer))
+      .then(data => {
+        audioSource.buffer = data;
+        audioSource.connect(audioContext.destination);
+      })
+      .catch(error => console.error("Audio error!", error));
   }
+
+  loadAudioFile();
 
   playButton.addEventListener("click", function() {
-    playAudio();
+    if (!music) {
+      audioSource.start(0);
+      music = true;
+    }
   });
 
-  function pauseAudio() {
-    audioElement.pause();
-    track.disconnect(); 
-  }
 
   pauseButton.addEventListener("click", function() {
-    pauseAudio();
+    if (music) {
+      audioSource.stop(0);
+      music = false;
+    }
   });
 
 });
