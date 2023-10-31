@@ -5,10 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Destination</title>
     <script src="/scripts/third-page.js"></script>
+
+     <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster+Two:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="/frontend/third-page.css" />
+
 </head>
 <body>
-    <h1>Hello</h1>
+    <div class="title">
+        <h1>New destination</h1>
+    </div>
+    <div class="container">
+        <div class="row1">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Destination name</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" >
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Make a review</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+              <div class="buttonBack">
+                <button type="button" class="btn btn-outline-primary" id="goBack">
+                    Back
+                  </button>
+              </div>
+              <!-- <button id="goBack">Back</button> -->
+        </div>
 
-    <button id="goBack">Back</button>
+        <div class="row2">
+            <div class="addPhoto">
+                <p>Add picture</p>
+                <input type="file" name="filename" accept="image/gif, image/jpeg, image/png">
+                <img style="z-index: -1;" width="750" height="500">
+            </div>
+        </div>
+         
+    </div>
+    
 </body>
 </html>
