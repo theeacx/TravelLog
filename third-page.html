@@ -30,6 +30,14 @@
     />
 
     <link rel="stylesheet" href="/frontend/third-page.css" />
+  
+
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+/>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  
   </head>
   <body>
     <div class="title">
@@ -63,6 +71,12 @@
         </div>
 
         <!-- <button id="goBack">Back</button> -->
+
+        <div class="location" id="geoLoc">
+          <div id="map" style="height: 300px; width:600px;"> </div>
+
+        </div>
+
       </div>
 
       <div class="row2">
@@ -70,15 +84,14 @@
           <p>Add picture</p>
           <input
             type="file"
+            id="file-photo"
             name="filename"
-            id="selectPhoto"
             accept="image/gif, image/jpeg, image/png"
           />
-          <img style="z-index: -1" width="550" height="300" />
+          <canvas width="550" height="300" id="canvas"></canvas>
         </div>
         <div class="buttonBack">
           <button type="button" id="add_btn">Add to my diary</button>
-          <button type="button" id="goBack">Back</button>
         </div>
       </div>
     </div>
