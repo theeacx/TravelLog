@@ -33,4 +33,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
   });
+
+  const terms = document.getElementById("termsPriv");
+
+  terms.addEventListener("click", function () {
+    window.location.href = "t&p-page.html";
+  });
 });
