@@ -55,5 +55,30 @@ document.addEventListener("DOMContentLoaded", function () {
       console.error("Error loading user data:", error);
     });
 
+    //---------INCA E WIP <3
+    const destinationList = document.getElementById("destinationList");
+    const newDest = document.createElement("li");
+    newDest.className = "destination-item";
+    const anchor = document.createElement("a");
+    anchor.href = `fourth-page.html?title=${encodeURIComponent(localStorage.getItem("destination"))}&description=${encodeURIComponent(localStorage.getItem("review"))}&photo=${encodeURIComponent('fructe.png')}&topAttractions=${encodeURIComponent(JSON.stringify('Nada'))}`;
+    anchor.className = "custom-link";
+    anchor.target = "_self";
+    anchor.textContent = localStorage.getItem("destination");
+    newDest.appendChild(anchor);
+
+    const delBtn = document.createElement("button");
+    delBtn.className = "delete-btn";
+    delBtn.id = "delete_btn";
+    delBtn.textContent = "Delete";
+    delBtn.addEventListener("click", function () {
+      newDest.remove();
+    });
+
+    newDest.appendChild(delBtn);
+
+    destinationList.appendChild(newDest);
+
+
+
 
 });
