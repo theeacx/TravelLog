@@ -63,15 +63,16 @@ document.addEventListener("click", function () {
     });
 
 });
-filePh.addEventListener("change", function(){
-    const fr=new FileReader();
-    fr.readAsDataURL(filePh.files[0]);
-    fr.addEventListener("load", function(){
-        const img=new Image();
-        img.src=fr.result;
-        context.drawImage(img, 0, 0, canvas.width, canvas.height);
-    });
+// filePh.addEventListener("change", function(){
+//     const fr=new FileReader();
+//     fr.readAsDataURL(filePh.files[0]);
+//     fr.addEventListener("load", function(){
+//         localStorage.setItem("photo", fr.result);
+//         const img=new Image();
+//         img.src=fr.result;
+//         context.drawImage(img, 0, 0, canvas.width, canvas.height);
+//     });
 
 
-});
+// });
 }

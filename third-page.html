@@ -30,14 +30,12 @@
     />
 
     <link rel="stylesheet" href="/frontend/third-page.css" />
-  
 
     <link
-  rel="stylesheet"
-  href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-/>
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-  
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
   </head>
   <body>
     <div class="title">
@@ -73,10 +71,8 @@
         <!-- <button id="goBack">Back</button> -->
 
         <div class="location" id="geoLoc">
-          <div id="map" style="height: 300px; width:600px;"> </div>
-
+          <div id="map" style="height: 300px; width: 600px"></div>
         </div>
-
       </div>
 
       <div class="row2">
@@ -88,6 +84,7 @@
             name="filename"
             accept="image/gif, image/jpeg, image/png"
           />
+          <img id="IMGPreview" src="" alt="Preview" />
           <canvas width="550" height="300" id="canvas"></canvas>
         </div>
         <div class="buttonBack">
@@ -96,5 +93,17 @@
         </div>
       </div>
     </div>
+    <script>
+      document
+        .querySelector("file-photo")
+        .addEventListener("change", function () {
+          const reader = new FilReader();
+
+          reader.addEventListener("load", () => {
+            localStorage.setItem("recent-image", reader.result);
+          });
+          reader.readAsDataURL(this.files[0]);
+        });
+    </script>
   </body>
 </html>
