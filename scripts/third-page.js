@@ -1,4 +1,6 @@
-document.addEventListener("DOMContentLoaded", function () {
+window.onload = function () {
+
+document.addEventListener("click", function () {
 
     //go back button
     const backButton= document.getElementById("add_btn");
@@ -7,3 +9,5 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+}
