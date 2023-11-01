@@ -4,11 +4,6 @@ window.onload = function () {
     const canvas=document.getElementById("canvas");
     const context=canvas.getContext("2d");
 
-    //add button
-    const backButton= document.getElementById("add_btn");
-    backButton.addEventListener("click", function(){
-        window.location.href = "second-page.html";
-    });
 
     //----geolocation api 
 
@@ -49,6 +44,28 @@ window.onload = function () {
     backButton2.addEventListener("click", function(){
         window.location.href = "second-page.html";
     });
+
+
+    const desti = document.getElementById("destinationName");
+    const review = document.getElementById("review");
+    
+    const addButton = document.getElementById("add_btn");
+
+    addButton.addEventListener("click", function() {
+        const name = desti.input;
+        const reviewText = review.input;
+        if (name && reviewText) {
+            localStorage.setItem("destination", name);
+            localStorage.setItem("review", reviewText);
+            alert("Destination added to your diary! :)");
+        } else {
+            alert("Please fill in both fields before adding to your diary!");
+        }
+
+        console.log(localStorage.getItem("destination"));
+        console.log(localStorage.getItem("review"));
+    });
+  
 
 
 // filePh.addEventListener("change", function(){
