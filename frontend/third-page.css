@@ -48,12 +48,15 @@ body{
 }
 
 .buttonBack{
-    padding-left: 225px;
-    padding-top: 100px;
+    padding-left: 150px;
+    padding-top: 50px;
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
 }
 
 #goBack{
-    margin-left: 100px;
+    margin-left: 0px;
     margin-top:50px;
     font: 25px  'Playfair',serif;
     border:none;
@@ -102,7 +105,7 @@ body{
     color: #531b25;
     cursor: pointer;
     outline: 3px solid #904955;
-    margin: 10px;
+    margin: 0px;
     margin-bottom:1.5rem;
 }
 #add_btn:hover{
