@@ -48,12 +48,12 @@ document.addEventListener('DOMContentLoaded', function() {
   function loadAudioFile() {
     fetch('/media/pianoBackground.mp3')
       .then(response => response.arrayBuffer())
-      .then(buffer => audioContext.decodeAudioData(buffer))
+      .then(buffer => audioContext.decodeAudioData(buffer)) // the audio file is decoded entirely here
       .then(data => {
-        audioSource.buffer = data;
-        audioSource.connect(audioContext.destination);
+        audioSource.buffer = data; //buffer is the decoded audio file
+        audioSource.connect(audioContext.destination); 
       })
-      .catch(error => console.error("Audio error!", error));
+      .catch(error => console.error("N-a mers :(", error));
   }
 
   loadAudioFile();
