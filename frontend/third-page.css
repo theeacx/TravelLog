@@ -73,6 +73,24 @@ body{
 
 }
 
+/* #selectPhoto{
+    font: 25px  'Playfair',serif;
+    border:none;
+    background-color: #ed8f8f;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 15px;
+    color: #531b25;
+    cursor: pointer;
+    outline: 3px solid #904955;
+    margin: 10px;
+    margin-bottom:1.5rem;
+}
+
+#selectPhoto:hover{
+    background-color: #ffbcbc;
+} */
+
 
 #add_btn{
     font: 25px  'Playfair',serif;
