@@ -1,4 +1,23 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+
+  const newDestinations= localStorage.getItem("newDestinations") ? JSON.parse(localStorage.getItem("newDestinations")) : [];
+  const newDest= {
+    destination: localStorage.getItem("destination"),
+    review: localStorage.getItem("review")
+  };
+  newDestinations.push(newDest);
+
+  
+  const uniqueDestinations= [...new Set(newDestinations.map(item => item.destination))];
+  const uniqueReviews= [...new Set(newDestinations.map(item => item.review))];
+  const uniqueDest= uniqueDestinations.map((destination, index) => {
+    return {destination: destination, review: uniqueReviews[index]};
+  });
+
+
+  localStorage.setItem("newDestinations", JSON.stringify(uniqueDest));
+
   const logoutButton = document.getElementById("logout_btn");
 
   logoutButton.addEventListener("click", function () {
@@ -15,11 +34,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const user1 = localStorage.getItem("user");
   const user = user1.substring(1, user1.length - 1);
 
-  
   const welcomeMsg= document.getElementById("welcome_msg");
     welcomeMsg.innerHTML = `Welcome ${user} to your journal!`;
-
-
 
   fetch("/json_files/Destinations.json")
     .then((response) => response.json())
@@ -55,28 +71,63 @@ document.addEventListener("DOMContentLoaded", function () {
       console.error("Error loading user data:", error);
     });
 
-    //---------INCA E WIP <3
-    const destinationList = document.getElementById("destinationList");
-    const newDest = document.createElement("li");
-    newDest.className = "destination-item";
-    const anchor = document.createElement("a");
-    anchor.href = `fourth-page.html?title=${encodeURIComponent(localStorage.getItem("destination"))}&description=${encodeURIComponent(localStorage.getItem("review"))}&photo=${encodeURIComponent('fructe.png')}&topAttractions=${encodeURIComponent(JSON.stringify('Nada'))}`;
-    anchor.className = "custom-link";
-    anchor.target = "_self";
-    anchor.textContent = localStorage.getItem("destination");
-    newDest.appendChild(anchor);
 
-    const delBtn = document.createElement("button");
-    delBtn.className = "delete-btn";
-    delBtn.id = "delete_btn";
-    delBtn.textContent = "Delete";
-    delBtn.addEventListener("click", function () {
-      newDest.remove();
-    });
+    if(newDestinations.length>0){
+      console.log(newDestinations);
 
-    newDest.appendChild(delBtn);
+      for (let i = 0; i < newDestinations.length; i++){
+        const destinationList= document.getElementById("destinationList");
+        const newDest= document.createElement("li");
+        newDest.className= "destination-item";
+        const anchor= document.createElement("a");
+        anchor.href= `fourth-page.html?title=${encodeURIComponent(newDestinations[i].destination)}&description=${encodeURIComponent(newDestinations[i].review)}&photo=${encodeURIComponent('fructe.png')}&topAttractions=${encodeURIComponent(JSON.stringify('Nada'))}`;
+        anchor.className= "custom-link";
+        anchor.target= "_self";
+        anchor.textContent= newDestinations[i].destination;
+        newDest.appendChild(anchor);
 
-    destinationList.appendChild(newDest);
+        const delBtn= document.createElement("button");
+        delBtn.className= "delete-btn";
+        delBtn.id= "delete_btn";
+        delBtn.textContent= "Delete";
+        delBtn.addEventListener("click", function(){
+          //aici inca trebuie lucrat  - nu sterge din local storage fara refresh
+          newDest.remove();
+          newDestinations.splice(newDestinations.indexOf(newDestinations[i].destination), 1);
+          localStorage.setItem("newDestinations", JSON.stringify(newDestinations));
+        });
+    
+    
+        newDest.appendChild(delBtn);
+        destinationList.appendChild(newDest);
+      }
+    }
+
+
+    // if(localStorage.getItem("review")!=null){
+    //   const destinationList = document.getElementById("destinationList");
+    //   const newDest = document.createElement("li");
+    //   newDest.className = "destination-item";
+    //   const anchor = document.createElement("a");
+    //   anchor.href = `fourth-page.html?title=${encodeURIComponent(localStorage.getItem("destination"))}&description=${encodeURIComponent(localStorage.getItem("review"))}&photo=${encodeURIComponent('fructe.png')}&topAttractions=${encodeURIComponent(JSON.stringify('Nada'))}`;
+    //   anchor.className = "custom-link";
+    //   anchor.target = "_self";
+    //   anchor.textContent = localStorage.getItem("destination");
+    //   newDest.appendChild(anchor);
+  
+    //   const delBtn = document.createElement("button");
+    //   delBtn.className = "delete-btn";
+    //   delBtn.id = "delete_btn";
+    //   delBtn.textContent = "Delete";
+    //   delBtn.addEventListener("click", function () {
+    //     newDest.remove();
+    //   });
+    //   newDest.appendChild(delBtn);
+    //   destinationList.appendChild(newDest);
+      
+
+    // }
+  
 
 
 
