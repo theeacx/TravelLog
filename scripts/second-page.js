@@ -1,22 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
-
-
+  
   const newDestinations= localStorage.getItem("newDestinations") ? JSON.parse(localStorage.getItem("newDestinations")) : [];
   const newDest= {
     destination: localStorage.getItem("destination"),
     review: localStorage.getItem("review")
   };
-  newDestinations.push(newDest);
 
-  
-  const uniqueDestinations= [...new Set(newDestinations.map(item => item.destination))];
-  const uniqueReviews= [...new Set(newDestinations.map(item => item.review))];
-  const uniqueDest= uniqueDestinations.map((destination, index) => {
-    return {destination: destination, review: uniqueReviews[index]};
-  });
+  if(!newDestinations.find(item => item.destination === newDest.destination)) {
+    newDestinations.push(newDest);
+  }
 
+  localStorage.removeItem("destination");
+  localStorage.removeItem("review");
 
-  localStorage.setItem("newDestinations", JSON.stringify(uniqueDest));
 
   const logoutButton = document.getElementById("logout_btn");
 
@@ -76,31 +72,33 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log(newDestinations);
 
       for (let i = 0; i < newDestinations.length; i++){
-        const destinationList= document.getElementById("destinationList");
-        const newDest= document.createElement("li");
-        newDest.className= "destination-item";
-        const anchor= document.createElement("a");
-        anchor.href= `fourth-page.html?title=${encodeURIComponent(newDestinations[i].destination)}&description=${encodeURIComponent(newDestinations[i].review)}&photo=${encodeURIComponent('fructe.png')}&topAttractions=${encodeURIComponent(JSON.stringify('Nada'))}`;
-        anchor.className= "custom-link";
-        anchor.target= "_self";
-        anchor.textContent= newDestinations[i].destination;
-        newDest.appendChild(anchor);
+        if(newDestinations[i].destination !=null || newDestinations[i].review !=null ){
 
-        const delBtn= document.createElement("button");
-        delBtn.className= "delete-btn";
-        delBtn.id= "delete_btn";
-        delBtn.textContent= "Delete";
-        delBtn.addEventListener("click", function(){
-          //aici inca trebuie lucrat  - nu sterge din local storage fara refresh
-          newDest.remove();
-          newDestinations.splice(newDestinations.indexOf(newDestinations[i].destination), 1);
-          localStorage.setItem("newDestinations", JSON.stringify(newDestinations));
-        });
-    
-    
+          const destinationList= document.getElementById("destinationList");
+          const newDest= document.createElement("li");
+          newDest.className= "destination-item";
+          const anchor= document.createElement("a");
+          anchor.href= `fourth-page.html?title=${encodeURIComponent(newDestinations[i].destination)}&description=${encodeURIComponent(newDestinations[i].review)}&photo=${encodeURIComponent('fructe.png')}&topAttractions=${encodeURIComponent(JSON.stringify('Nada'))}`;
+          anchor.className= "custom-link";
+          anchor.target= "_self";
+          anchor.textContent= newDestinations[i].destination;
+          newDest.appendChild(anchor);
+
+          const delBtn= document.createElement("button");
+          delBtn.className= "delete-btn";
+          delBtn.id= "delete_btn";
+          delBtn.textContent= "Delete";
+          delBtn.addEventListener("click", function(){
+            newDest.remove();
+            newDestinations.splice(newDestinations.findIndex(item => item.destination === newDestinations[i].destination), 1);
+            localStorage.setItem("newDestinations", JSON.stringify(newDestinations));
+          });
         newDest.appendChild(delBtn);
         destinationList.appendChild(newDest);
       }
+
+
+         }
     }
 
 
@@ -128,8 +126,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // }
   
-
-
 
 
 });
