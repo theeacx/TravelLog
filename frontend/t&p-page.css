@@ -6,9 +6,6 @@ body {
     max-height: 100vh;
 }
 
-.title{
-    height:65vh;
-}
 
 .title h1{
     font-family: 'Dancing Script', cursive;
@@ -16,7 +13,7 @@ body {
     font-size: 50px;
     color: #904955;
     text-align: center;
-    margin-top:10vh;
+    margin-top:5vh;
 }
 
 .title p{
@@ -29,20 +26,34 @@ body {
 }
 
 .box{
+    overflow-y: scroll;
     background-color: rgb(255, 240, 240);
     color: #a84957;
-    margin: 20px;
-    margin-top: 5px;
+    margin: 30px;
+    margin-top: -1px;
     position: center;
     border-radius: 10px;
     border: 2px solid #a84957;
-    height: 500px;
+    height: 400px;
     width: 1200px;
 }
 
-#box{
-    font: 20px  'Lobster', cursive;
-    text-align: left;
-    margin-left: 15px;
-    /* margin-top: 5px; */
+#back_btn{
+    margin-left: 15cm;
 }
+
+.form-check{
+    margin-left: 14.5cm;
+    position: center;
+}
+
+#consentBox{
+    font-family: 'Dancing Script', cursive;
+    position: center;
+    font-size: 25px;
+    color: #904955;
+    text-align: center;
+    /* margin-top:5vh; */
+}
+
+
