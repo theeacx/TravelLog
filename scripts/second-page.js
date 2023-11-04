@@ -82,7 +82,12 @@ document.addEventListener("DOMContentLoaded", function () {
           const newDest= document.createElement("li");
           newDest.className= "destination-item";
           const anchor= document.createElement("a");
-          anchor.href= `fourth-page.html?title=${encodeURIComponent(newDestinations[i].destination)}&description=${encodeURIComponent(newDestinations[i].description)}&photo=${encodeURIComponent('fructe.png')}&topAttractions=${encodeURIComponent(newDestinations[i].topAttractions)}`;
+          
+          anchor.href= `fourth-page.html?title=${encodeURIComponent(newDestinations[i].destination)}
+          &description=${encodeURIComponent(newDestinations[i].description)}
+          &photo=${encodeURIComponent('fructe.png')}
+          &topAttractions=${encodeURIComponent(newDestinations[i].topAttractions)}`;
+
           anchor.className= "custom-link";
           anchor.target= "_self";
           anchor.textContent= newDestinations[i].destination;
