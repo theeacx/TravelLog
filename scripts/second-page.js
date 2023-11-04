@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+  //COD DE VERIFICAT----------------------------------------------
   const newDestinations= localStorage.getItem("newDestinations") ? JSON.parse(localStorage.getItem("newDestinations")) : [];
   const newDest= {
     destination: localStorage.getItem("destination"),
@@ -16,6 +17,9 @@ document.addEventListener("DOMContentLoaded", function () {
   localStorage.removeItem("destination");
   localStorage.removeItem("review");
   localStorage.removeItem("description");
+  localStorage.removeItem("topAttractions");
+  localStorage.removeItem("recent-image");
+  //COD DE VERIFICAT----------------------------------------------
 
 
   const logoutButton = document.getElementById("logout_btn");
@@ -71,6 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
       console.error("Error loading user data:", error);
     });
 
+    //COD DE VERIFICAT----------------------------------------------
 
     if(newDestinations.length>0){
       console.log(newDestinations);
@@ -82,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
           const newDest= document.createElement("li");
           newDest.className= "destination-item";
           const anchor= document.createElement("a");
-          
+
           anchor.href= `fourth-page.html?title=${encodeURIComponent(newDestinations[i].destination)}
           &description=${encodeURIComponent(newDestinations[i].description)}
           &photo=${encodeURIComponent('fructe.png')}
@@ -109,6 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
          }
     }
+    //COD DE VERIFICAT----------------------------------------------
 
 
     // if(localStorage.getItem("review")!=null){

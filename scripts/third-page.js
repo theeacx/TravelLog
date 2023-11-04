@@ -39,6 +39,8 @@ window.onload = function () {
         window.location.href = "second-page.html";
     });
 
+
+    //COD DE VERIFICAT----------------------------------------------
     const desti = document.getElementById("exampleFormControlInput1");
     const description=document.getElementById("exampleFormControlTextarea2");
     const review = document.getElementById("exampleFormControlTextarea3");
@@ -48,6 +50,7 @@ window.onload = function () {
 
     const addButton = document.getElementById("add_btn");
 
+    //COD DE VERIFICAT----------------------------------------------
     addButton.addEventListener("click", function () {
         const name = desti.value;
         const rev = review.value;
