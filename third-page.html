@@ -56,31 +56,54 @@
 
         <div class="mb-3" id="review">
           <label for="exampleFormControlTextarea1" class="form-label"
+            >Description</label
+          >
+          <textarea
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            rows="1"
+          ></textarea>
+        </div>
+
+        <div class="mb-3" id="review">
+          <label for="exampleFormControlTextarea1" class="form-label"
             >Review this destination</label
           >
           <textarea
             class="form-control"
             id="exampleFormControlTextarea1"
-            rows="3"
+            rows="1"
           ></textarea>
+        </div>
+
+        <div class="mb-3" id="review">
+          <label for="exampleFormControlTextarea1" class="form-label"
+            >Top atractions</label
+          >
+          <textarea
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            rows="1"
+          ></textarea>
+        </div>
+
+        <div class="buttonBack">
+          <button type="button" id="add_btn">Add to my diary</button>
+          <button type="button" id="goBack">Back</button>
         </div>
 
         <!-- <button id="goBack">Back</button> -->
 
-        <div class="location" id="geoLoc">
-          <div id="map" style="height: 300px; width: 600px"></div>
-        </div>
       </div>
 
       <div class="row2">
         <div class="addPhoto">
           <p>Add picture</p>
           <input type="file" id="myFileInput" />
-          <canvas width="500" height="350" id="imageCanvas"></canvas>
+          <canvas width="300" height="150" id="imageCanvas"></canvas>
         </div>
-        <div class="buttonBack">
-          <button type="button" id="add_btn">Add to my diary</button>
-          <button type="button" id="goBack">Back</button>
+        <div class="location" id="geoLoc">
+          <div id="map" style="height: 300px; width: 600px"></div>
         </div>
       </div>
     </div>
