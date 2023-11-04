@@ -1,9 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
-  
+
   const newDestinations= localStorage.getItem("newDestinations") ? JSON.parse(localStorage.getItem("newDestinations")) : [];
   const newDest= {
     destination: localStorage.getItem("destination"),
-    review: localStorage.getItem("review")
+    review: localStorage.getItem("review"),
+    description: localStorage.getItem("description"),
+    topAttractions: localStorage.getItem("topAttractions"),
+    photo: localStorage.getItem("recent-image")
   };
 
   if(!newDestinations.find(item => item.destination === newDest.destination)) {
@@ -12,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   localStorage.removeItem("destination");
   localStorage.removeItem("review");
+  localStorage.removeItem("description");
 
 
   const logoutButton = document.getElementById("logout_btn");
@@ -72,13 +76,13 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log(newDestinations);
 
       for (let i = 0; i < newDestinations.length; i++){
-        if(newDestinations[i].destination !=null || newDestinations[i].review !=null ){
+        if(newDestinations[i].destination !=null || newDestinations[i].review !=null || newDestinations[i].description !=null){
 
           const destinationList= document.getElementById("destinationList");
           const newDest= document.createElement("li");
           newDest.className= "destination-item";
           const anchor= document.createElement("a");
-          anchor.href= `fourth-page.html?title=${encodeURIComponent(newDestinations[i].destination)}&description=${encodeURIComponent(newDestinations[i].review)}&photo=${encodeURIComponent('fructe.png')}&topAttractions=${encodeURIComponent(JSON.stringify('Nada'))}`;
+          anchor.href= `fourth-page.html?title=${encodeURIComponent(newDestinations[i].destination)}&description=${encodeURIComponent(newDestinations[i].description)}&photo=${encodeURIComponent('fructe.png')}&topAttractions=${encodeURIComponent(newDestinations[i].topAttractions)}`;
           anchor.className= "custom-link";
           anchor.target= "_self";
           anchor.textContent= newDestinations[i].destination;

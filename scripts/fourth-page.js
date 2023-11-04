@@ -31,6 +31,7 @@ fetch("/json_files/Reviews.json")
   const user = user1.substring(1, user1.length - 1);
   console.log(destinationTitle);
   console.log(user);
+  
   if (destinationTitle && user) {
     const destinationReview = data.destinationReviews.find((review) =>
       review.destination === destinationTitle

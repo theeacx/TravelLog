@@ -40,17 +40,25 @@ window.onload = function () {
     });
 
     const desti = document.getElementById("exampleFormControlInput1");
-    const review = document.getElementById("exampleFormControlTextarea1");
+    const description=document.getElementById("exampleFormControlTextarea2");
+    const review = document.getElementById("exampleFormControlTextarea3");
+    const attr=document.getElementById("exampleFormControlTextarea4").value.split(",");
+    console.log(attr)
+
 
     const addButton = document.getElementById("add_btn");
 
     addButton.addEventListener("click", function () {
         const name = desti.value;
-        const reviewText = review.value;
+        const rev = review.value;
+        const des=description.value;
+        const topAttractions=attr;
 
-        if (name && reviewText) {
+        if (name && rev && des && topAttractions) {
             localStorage.setItem("destination", name);
-            localStorage.setItem("review", reviewText);
+            localStorage.setItem("review", rev);
+            localStorage.setItem("description", des);
+            localStorage.setItem("topAttractions", topAttractions);
             alert("Destination added to your diary! :)");
         } else {
             alert("Please fill in both fields before adding to your diary!");
@@ -58,6 +66,7 @@ window.onload = function () {
 
         console.log(localStorage.getItem("destination"));
         console.log(localStorage.getItem("review"));
+        console.log(localStorage.getItem("description"));
     });
 
     const fileInput = document.querySelector("#myFileInput");
