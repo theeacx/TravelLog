@@ -73,28 +73,6 @@ body {
     margin-top: 5px;
     border-radius: 10px;
 }
-#goBack{
-    font: 25px  'Playfair',serif;
-    background-color: #ffebeb;
-    border: none;
-    border-radius: 5px;
-    font-size: 15px;
-    color: #531b25;
-    cursor: pointer;
-    outline: none;
-    outline: 3px solid #904955;
-    margin: 10px;
-    margin-top: 25px;
-    margin-left: 290px;
-    height: 30px;
-}
-
-#goBack:hover {
-    background-color: #904955;
-    color: #ffebeb;
-    outline: 1px solid #904955;
-    transition: 0.3s;
-}
 .reviews{
     background-color: rgb(255, 240, 240);
     color: #a84957;
@@ -160,6 +138,12 @@ body {
 .other-reviews-input::-webkit-scrollbar-thumb:hover {
     background: #ff8d8d; 
 } */
+
+#goBackToDest{
+    background-color: rgb(255, 240, 240);
+    color:#a84957;
+    border: 2px solid #a84957;
+}
 
 
 

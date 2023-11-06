@@ -1,5 +1,10 @@
 window.onload = function () {
+
+   
+
+
     //----geolocation api 
+
 
     function createMap() {
         if ("geolocation" in navigator) {
@@ -110,4 +115,6 @@ window.onload = function () {
             };
         }
     });
+
+    
 }

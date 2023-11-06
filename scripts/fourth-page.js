@@ -1,5 +1,11 @@
 window.onload=function(){
 
+  const backBtn = document.getElementById("goBackToDest");
+  backBtn.addEventListener("click", function () {
+    window.location.href = "second-page.html";
+    localStorage.removeItem("clickedDest");
+  });
+
   const clickedDestination = localStorage.getItem("clickedDest");
   console.log(clickedDestination);
 
@@ -17,13 +23,20 @@ if (clickedDestination) {
   const personalReviewElement = document.getElementById('personal-review');
   const otherReviews = document.getElementById('other-reviews-input');
 
+  const topAttractionsElement = document.getElementById("destination-top-attractions");
+   
+
    titleElement.textContent = diaryData.destination;
    headingElement.textContent = `About ${diaryData.destination}`;
    myReviewElement.textContent = `My review of ${diaryData.destination}`;
    descriptionElement.textContent = diaryData.description;
    personalReviewElement.textContent = diaryData.review;
    otherReviews.innerHTML = `<p>RoxanaPetrescu: Loved it here, would return any time! </p> TheaLixcandru: I had a great time! Would recommend! </p> LoredanaGroza: LOVELY time here, amazing people and food! </p> `;
-
+   topAttractionsElement.innerHTML = `<p>${diaryData.destination}'s top attractions are:</p><ul>`;
+   diaryData.topAttractions.forEach(attraction => {
+        topAttractionsElement.innerHTML += `<li>${attraction}</li>`;
+    });
+   
   
 }
 
