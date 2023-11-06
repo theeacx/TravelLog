@@ -46,6 +46,11 @@ body{
     color: #904955;
     text-align: left; 
 }
+#imageCanvas{
+    margin-right: 25px;
+    margin-left: 125px;
+
+}
 
 .buttonBack{
     padding-left: 150px;

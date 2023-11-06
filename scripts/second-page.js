@@ -14,11 +14,11 @@ document.addEventListener("DOMContentLoaded", function () {
     newDestinations.push(newDest);
   }
 
-  localStorage.removeItem("destination");
-  localStorage.removeItem("review");
-  localStorage.removeItem("description");
-  localStorage.removeItem("topAttractions");
-  localStorage.removeItem("recent-image");
+  // localStorage.removeItem("destination");
+  // localStorage.removeItem("review");
+  // localStorage.removeItem("description");
+  // localStorage.removeItem("topAttractions");
+  // localStorage.removeItem("recent-image");
   //COD DE VERIFICAT----------------------------------------------
 
 
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           anchor.href= `fourth-page.html?title=${encodeURIComponent(newDestinations[i].destination)}
           &description=${encodeURIComponent(newDestinations[i].description)}
-          &photo=${encodeURIComponent('fructe.png')}
+          &photo=${encodeURIComponent('newDestinations[i].photo')}
           &topAttractions=${encodeURIComponent(newDestinations[i].topAttractions)}`;
 
           anchor.className= "custom-link";
@@ -141,6 +141,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // }
   
-
 
 });

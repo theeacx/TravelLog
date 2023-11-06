@@ -54,17 +54,18 @@ window.onload = function () {
     addButton.addEventListener("click", function () {
         const name = desti.value;
         const rev = review.value;
-        const des=description.value;
-        const topAttractions=attr;
+        const des = description.value;
+        const attr = attrInput.value.split(","); // Assuming attrInput is the input field for top attractions
 
-        if (name && rev && des && topAttractions) {
+        if (name && rev && des) {
+            const topAttractionsJSON = JSON.stringify(attr);
             localStorage.setItem("destination", name);
             localStorage.setItem("review", rev);
             localStorage.setItem("description", des);
-            localStorage.setItem("topAttractions", topAttractions);
+            localStorage.setItem("topAttractions", topAttractionsJSON);
             alert("Destination added to your diary! :)");
         } else {
-            alert("Please fill in both fields before adding to your diary!");
+            alert("Please fill in all fields before adding to your diary!");
         }
 
         console.log(localStorage.getItem("destination"));
@@ -75,15 +76,12 @@ window.onload = function () {
     const fileInput = document.querySelector("#myFileInput");
     const imageCanvas = document.querySelector("#imageCanvas");
     const ctx = imageCanvas.getContext("2d");
-
-    // Clear the canvas when the page loads
     ctx.clearRect(0, 0, imageCanvas.width, imageCanvas.height);
 
     fileInput.addEventListener("input", function () {
         const reader = new FileReader();
 
         reader.addEventListener("load", () => {
-            // Clear the canvas and draw the image on it
             ctx.clearRect(0, 0, imageCanvas.width, imageCanvas.height);
             const img = new Image();
             img.src = reader.result;
@@ -102,7 +100,6 @@ window.onload = function () {
     document.addEventListener("DOMContentLoaded", () => {
         const recentImageDataURL = localStorage.getItem("recent-image");
         if (recentImageDataURL) {
-            // Draw the image on the canvas when the page loads
             const img = new Image();
             img.src = recentImageDataURL;
             img.onload = () => {
