@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   //COD DE VERIFICAT----------------------------------------------
+  localStorage.setItem("newDestiantions", JSON.stringify([]));
   const newDestinations= localStorage.getItem("newDestinations") ? JSON.parse(localStorage.getItem("newDestinations")) : [];
   const newDest= {
     destination: localStorage.getItem("destination"),
@@ -14,11 +15,13 @@ document.addEventListener("DOMContentLoaded", function () {
     newDestinations.push(newDest);
   }
 
-  // localStorage.removeItem("destination");
-  // localStorage.removeItem("review");
-  // localStorage.removeItem("description");
-  // localStorage.removeItem("topAttractions");
-  // localStorage.removeItem("recent-image");
+  localStorage.removeItem("destination");
+  localStorage.removeItem("review");
+  localStorage.removeItem("description");
+  localStorage.removeItem("topAttractions");
+  localStorage.removeItem("recent-image");
+
+  localStorage.setItem("newDestinations", JSON.stringify(newDestinations));
   //COD DE VERIFICAT----------------------------------------------
 
 
@@ -90,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           anchor.href= `fourth-page.html?title=${encodeURIComponent(newDestinations[i].destination)}
           &description=${encodeURIComponent(newDestinations[i].description)}
-          &photo=${encodeURIComponent('newDestinations[i].photo')}
+          &photo=${encodeURIComponent('fructe.png')}
           &topAttractions=${encodeURIComponent(newDestinations[i].topAttractions)}`;
 
           anchor.className= "custom-link";
@@ -141,5 +144,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // }
   
+
 
 });
