@@ -24,7 +24,6 @@ if (clickedDestination) {
   const personalReviewElement = document.getElementById('personal-review');
   const otherReviews = document.getElementById('other-reviews-input');
   const topAttractionsElement = document.getElementById("destination-top-attractions");
-   
 
    titleElement.textContent = diaryData.destination;
    headingElement.textContent = `About ${diaryData.destination}`;
@@ -131,7 +130,7 @@ fetch("/json_files/Reviews.json")
       } else {
         console.log("User's review not found for the destination.");
       }
-      
+
     } else {
       console.log("Destination not found.");
     }
