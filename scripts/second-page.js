@@ -71,6 +71,8 @@ document.addEventListener("DOMContentLoaded", function () {
           destinationListItem.remove();
         });
         destinationListItem.appendChild(deleteButton);
+
+
         destinationsList.appendChild(destinationListItem);
       });
     })
@@ -99,6 +101,11 @@ document.addEventListener("DOMContentLoaded", function () {
           anchor.className= "custom-link";
           anchor.target= "_self";
           anchor.textContent= newDestinations[i].destination;
+
+          anchor.addEventListener("click", function(){  
+            localStorage.setItem("clickedDest", newDestinations[i].destination)
+          });
+
           newDest.appendChild(anchor);
 
           const delBtn= document.createElement("button");

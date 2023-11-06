@@ -1,8 +1,13 @@
 window.onload=function(){
-  const storedDiaryData = localStorage.getItem('userDiaryData');
 
-if (storedDiaryData) {
-  const diaryData = JSON.parse(storedDiaryData);
+  const clickedDestination = localStorage.getItem("clickedDest");
+  console.log(clickedDestination);
+
+if (clickedDestination) {
+  const destinations= localStorage.getItem("newDestinations");
+  console.log(destinations )
+  // go through the destinations array and find the destination which has the same name as the clicked destination
+  const diaryData = JSON.parse(destinations).find((dest) => dest.destination === clickedDestination);
   console.log(diaryData);
 
   const titleElement = document.getElementById('destination-title');
@@ -10,13 +15,16 @@ if (storedDiaryData) {
   const descriptionElement = document.getElementById('destination-description');
   const myReviewElement = document.getElementById('review-heading');
   const personalReviewElement = document.getElementById('personal-review');
+  const otherReviews = document.getElementById('other-reviews-input');
 
-  titleElement.textContent = diaryData.name;
-  headingElement.textContent = `About ${diaryData.name}`;
-  myReviewElement.textContent = `My review of ${diaryData.name}`;
-  descriptionElement.textContent = diaryData.des;
-  personalReviewElement.textContent = diaryData.rev;
-  console.log(diaryData);
+   titleElement.textContent = diaryData.destination;
+   headingElement.textContent = `About ${diaryData.destination}`;
+   myReviewElement.textContent = `My review of ${diaryData.destination}`;
+   descriptionElement.textContent = diaryData.description;
+   personalReviewElement.textContent = diaryData.review;
+   otherReviews.innerHTML = `<p>RoxanaPetrescu: Loved it here, would return any time! </p> TheaLixcandru: I had a great time! Would recommend! </p> LoredanaGroza: LOVELY time here, amazing people and food! </p> `;
+
+  
 }
 
 
