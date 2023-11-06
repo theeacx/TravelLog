@@ -14,7 +14,8 @@ if (clickedDestination) {
   console.log(destinations )
   // go through the destinations array and find the destination which has the same name as the clicked destination
   const diaryData = JSON.parse(destinations).find((dest) => dest.destination === clickedDestination);
-  console.log(diaryData);
+  
+  //console.log(diaryData);
 
   const titleElement = document.getElementById('destination-title');
   const headingElement = document.getElementById('destination-heading');
@@ -32,13 +33,26 @@ if (clickedDestination) {
    personalReviewElement.textContent = diaryData.review;
    otherReviews.innerHTML = `<p>RoxanaPetrescu: Loved it here, would return any time! </p> TheaLixcandru: I had a great time! Would recommend! </p> LoredanaGroza: LOVELY time here, amazing people and food! </p> `;
    topAttractionsElement.innerHTML = `<p>${diaryData.destination}'s top attractions are:</p><ul>`;
+
+   //console.log(diaryData.topAttractions);
+
+
+    const topAttractions = diaryData.topAttractions.split(",");
+    topAttractions.forEach(attraction => {
+        topAttractionsElement.innerHTML += `<li>${attraction}</li>`;
+    });
+  
+  
+
   //  diaryData.topAttractions.forEach(attraction => {
   //       topAttractionsElement.innerHTML += `<li>${attraction}</li>`;
   //   });
+
     const destinationImage = diaryData.photo;
-    console.log("***************************");
-    console.log(destinationImage);
-    console.log("***************************");
+
+    //console.log("***************************");
+    //console.log(destinationImage);
+   // console.log("***************************");
    
     let canvas=document.getElementById('destination-photo');
     let context =canvas.getContext('2d');
@@ -49,7 +63,7 @@ if (clickedDestination) {
     let img=new Image();
     if(destinationImage){
       img.src=destinationImage;
-      console.log(img.src);
+      //console.log(img.src);
 
       //context.drawImage(url,x,y,width,height)
       img.onload=function(){
@@ -72,7 +86,7 @@ if (clickedDestination) {
     let canvasWidth=canvas.width;
     let canvasHeight=canvas.height;
     const user = localStorage.getItem("user");
-    console.log(user);
+
     let img=new Image();
   
     // img.src="/media/fructe.png";
@@ -95,6 +109,8 @@ fetch("/json_files/Reviews.json")
   const destinationTitle = urlParams.get("title");
   const user1 = localStorage.getItem("user");
   const user = user1.substring(1, user1.length - 1);
+
+  console.log(data);
   console.log(destinationTitle);
   console.log(user);
   
@@ -115,6 +131,7 @@ fetch("/json_files/Reviews.json")
       } else {
         console.log("User's review not found for the destination.");
       }
+      
     } else {
       console.log("Destination not found.");
     }
@@ -155,7 +172,7 @@ fetch("/json_files/Reviews.json")
     const destinationDescription = urlParams.get("description");
     const destinationImage = urlParams.get("photo");
     const destinationTopAttractions = JSON.parse(urlParams.get("topAttractions"));
-    console.log(destinationImage);
+    //console.log(destinationImage);
     console.log("-------------------" + destinationTitle);
 
     const titleElement = document.getElementById("destination-title");
