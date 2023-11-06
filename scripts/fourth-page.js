@@ -1,4 +1,26 @@
 window.onload=function(){
+  const storedDiaryData = localStorage.getItem('userDiaryData');
+
+if (storedDiaryData) {
+  const diaryData = JSON.parse(storedDiaryData);
+  console.log(diaryData);
+
+  const titleElement = document.getElementById('destination-title');
+  const headingElement = document.getElementById('destination-heading');
+  const descriptionElement = document.getElementById('destination-description');
+  const myReviewElement = document.getElementById('review-heading');
+  const personalReviewElement = document.getElementById('personal-review');
+
+  titleElement.textContent = diaryData.name;
+  headingElement.textContent = `About ${diaryData.name}`;
+  myReviewElement.textContent = `My review of ${diaryData.name}`;
+  descriptionElement.textContent = diaryData.des;
+  personalReviewElement.textContent = diaryData.rev;
+  console.log(diaryData);
+}
+
+
+
     let canvas=document.getElementById('destination-photo');
     let context =canvas.getContext('2d');
 
@@ -130,5 +152,6 @@ fetch("/json_files/Reviews.json")
         });
         topAttractionsElement.innerHTML += '</ul>';
     }
+    
     
 }

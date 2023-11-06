@@ -44,8 +44,8 @@ window.onload = function () {
     const desti = document.getElementById("exampleFormControlInput1");
     const description=document.getElementById("exampleFormControlTextarea2");
     const review = document.getElementById("exampleFormControlTextarea3");
-    const attr=document.getElementById("exampleFormControlTextarea4").value.split(",");
-    console.log(attr)
+    const attrInput=document.getElementById("exampleFormControlTextarea4").value.split(",");
+    //console.log(attr)
 
 
     const addButton = document.getElementById("add_btn");
@@ -55,22 +55,30 @@ window.onload = function () {
         const name = desti.value;
         const rev = review.value;
         const des = description.value;
-        const attr = attrInput.value.split(","); // Assuming attrInput is the input field for top attractions
+        //const attr = attrInput.value.split(","); // Assuming attrInput is the input field for top attractions
 
-        if (name && rev && des) {
-            const topAttractionsJSON = JSON.stringify(attr);
-            localStorage.setItem("destination", name);
-            localStorage.setItem("review", rev);
-            localStorage.setItem("description", des);
-            localStorage.setItem("topAttractions", topAttractionsJSON);
-            alert("Destination added to your diary! :)");
-        } else {
-            alert("Please fill in all fields before adding to your diary!");
-        }
+        // if (name && rev && des) {
+        //     const topAttractionsJSON = JSON.stringify(attr);
+        //     localStorage.setItem("destination", name);
+        //     localStorage.setItem("review", rev);
+        //     localStorage.setItem("description", des);
+        //     localStorage.setItem("topAttractions", topAttractionsJSON);
+        //     alert("Destination added to your diary! :)");
+        // } else {
+        //     alert("Please fill in all fields before adding to your diary!");
+        // }
 
-        console.log(localStorage.getItem("destination"));
-        console.log(localStorage.getItem("review"));
-        console.log(localStorage.getItem("description"));
+        // console.log(localStorage.getItem("destination"));
+        // console.log(localStorage.getItem("review"));
+        // console.log(localStorage.getItem("description"));
+        const diaryData={
+            name, 
+            des,
+            rev,
+           // attr
+        };
+        console.log(diaryData);
+        localStorage.setItem("userDiaryData", JSON.stringify(diaryData));
     });
 
     const fileInput = document.querySelector("#myFileInput");
