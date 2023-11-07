@@ -22,7 +22,6 @@ if (clickedDestination) {
   const myReviewElement = document.getElementById('review-heading');
   const personalReviewElement = document.getElementById('personal-review');
   const otherReviews = document.getElementById('other-reviews-input');
-
   const topAttractionsElement = document.getElementById("destination-top-attractions");
    
 
@@ -33,11 +32,35 @@ if (clickedDestination) {
    personalReviewElement.textContent = diaryData.review;
    otherReviews.innerHTML = `<p>RoxanaPetrescu: Loved it here, would return any time! </p> TheaLixcandru: I had a great time! Would recommend! </p> LoredanaGroza: LOVELY time here, amazing people and food! </p> `;
    topAttractionsElement.innerHTML = `<p>${diaryData.destination}'s top attractions are:</p><ul>`;
-   diaryData.topAttractions.forEach(attraction => {
-        topAttractionsElement.innerHTML += `<li>${attraction}</li>`;
-    });
+  //  diaryData.topAttractions.forEach(attraction => {
+  //       topAttractionsElement.innerHTML += `<li>${attraction}</li>`;
+  //   });
+    const destinationImage = diaryData.photo;
+    console.log("***************************");
+    console.log(destinationImage);
+    console.log("***************************");
    
-  
+    let canvas=document.getElementById('destination-photo');
+    let context =canvas.getContext('2d');
+
+   
+    let canvasWidth=canvas.width;
+    let canvasHeight=canvas.height;
+    let img=new Image();
+    if(destinationImage){
+      img.src=destinationImage;
+      console.log(img.src);
+
+      //context.drawImage(url,x,y,width,height)
+      img.onload=function(){
+          context.clearRect(0, 0, canvasWidth, canvasHeight);
+          context.drawImage(img,0,0,canvas.width,canvas.height);
+      }
+
+      img.onerror = function () {
+          console.error("Failed to load the image.");
+      };
+  }
 }
 
 
