@@ -173,6 +173,57 @@ fetch("/json_files/Reviews.json")
   }
 
 
+  const title = urlParams.get("title");
+  if(title=="Paris"){
+    const mymap = L.map("map").setView([48.8566, 2.3522], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>',
+    }).addTo(mymap);
+    const marker = L.marker([48.8566, 2.3522]).addTo(mymap);
+  }
+  if(title=="Barcelona"){
+    const mymap = L.map("map").setView([41.3851, 2.1734], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>',
+    }).addTo(mymap);
+    const marker = L.marker([41.3851, 2.1734]).addTo(mymap);
+  }
+  if(title=="Madrid"){
+    const mymap = L.map("map").setView([40.4168, 3.7038], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>',
+    }).addTo(mymap);
+    const marker = L.marker([40.4168, 3.7038]).addTo(mymap);
+  }
+  if(title=="Copenhagen"){
+    const mymap = L.map("map").setView([55.6761, 12.5683], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>',
+    }).addTo(mymap);
+    const marker = L.marker([55.6761, 12.5683]).addTo(mymap);
+  }
+  if(title=="Amsterdam"){
+    const mymap = L.map("map").setView([52.3667, 4.8945], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>',
+    }).addTo(mymap);
+    const marker = L.marker([52.3667, 4.8945]).addTo(mymap);
+  }
+  if(title=="Rome"){
+    const mymap = L.map("map").setView([41.9028, 12.4964], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>',
+    }).addTo(mymap);
+    const marker = L.marker([41.9028, 12.4964]).addTo(mymap);
+  }
+
+
 });
 
 
