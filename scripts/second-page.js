@@ -8,7 +8,9 @@ document.addEventListener("DOMContentLoaded", function () {
     review: localStorage.getItem("review"),
     description: localStorage.getItem("description"),
     topAttractions: localStorage.getItem("topAttractions"),
-    photo: localStorage.getItem("recent-image")
+    photo: localStorage.getItem("recent-image"),
+    latitude: localStorage.getItem("latitude"),
+    longitude: localStorage.getItem("longitude")
   };
 
   if(!newDestinations.find(item => item.destination === newDest.destination)) {
@@ -20,9 +22,10 @@ document.addEventListener("DOMContentLoaded", function () {
   localStorage.removeItem("description");
   localStorage.removeItem("topAttractions");
   localStorage.removeItem("recent-image");
+  localStorage.removeItem("latitude");
+  localStorage.removeItem("longitude");
 
   localStorage.setItem("newDestinations", JSON.stringify(newDestinations));
-  //COD DE VERIFICAT----------------------------------------------
 
 
   const logoutButton = document.getElementById("logout_btn");

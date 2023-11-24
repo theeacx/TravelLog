@@ -3,6 +3,10 @@ window.onload = function () {
     //----geolocation api 
 
 
+  let latitude = null;
+let longitude = null;
+    
+
     function createMap() {
         if ("geolocation" in navigator) {
             navigator.geolocation.getCurrentPosition(function (position) {
@@ -19,11 +23,22 @@ window.onload = function () {
                 map.on("dblclick", function (event) {
                     const loc = L.marker(event.latlng).addTo(map);
                     locations.push(loc);
+                    
 
+                   latitude = event.latlng.lat;
+                    longitude = event.latlng.lng;
+                    
+                   
                     loc.on("click", function () {
                         map.removeLayer(loc);
                         const index = locations.indexOf(loc);
                         locations.splice(index, 1);
+
+                        latitude = null;
+                        longitude = null;
+
+    
+
                     });
                 });
             });
@@ -67,6 +82,8 @@ window.onload = function () {
             localStorage.setItem("review", rev);
             localStorage.setItem("description", des);
             localStorage.setItem("topAttractions", topAttractions);
+            localStorage.setItem("latitude", latitude); 
+            localStorage.setItem("longitude", longitude);
             alert("Destination added to your diary! :)");
         } else {
             alert("Please fill in both fields before adding to your diary!");
@@ -118,3 +135,4 @@ window.onload = function () {
 
     
 }
+

@@ -1,5 +1,8 @@
 window.onload=function(){
 
+
+
+
   const backBtn = document.getElementById("goBackToDest");
   backBtn.addEventListener("click", function () {
     window.location.href = "second-page.html";
@@ -33,7 +36,6 @@ if (clickedDestination) {
    otherReviews.innerHTML = `<p>RoxanaPetrescu: Loved it here, would return any time! </p> TheaLixcandru: I had a great time! Would recommend! </p> LoredanaGroza: LOVELY time here, amazing people and food! </p> `;
    topAttractionsElement.innerHTML = `<p>${diaryData.destination}'s top attractions are:</p><ul>`;
 
-   //console.log(diaryData.topAttractions);
 
 
     const topAttractions = diaryData.topAttractions.split(",");
@@ -41,17 +43,9 @@ if (clickedDestination) {
         topAttractionsElement.innerHTML += `<li>${attraction}</li>`;
     });
   
-  
-
-  //  diaryData.topAttractions.forEach(attraction => {
-  //       topAttractionsElement.innerHTML += `<li>${attraction}</li>`;
-  //   });
 
     const destinationImage = diaryData.photo;
 
-    //console.log("***************************");
-    //console.log(destinationImage);
-   // console.log("***************************");
    
     let canvas=document.getElementById('destination-photo');
     let context =canvas.getContext('2d');
@@ -62,9 +56,7 @@ if (clickedDestination) {
     let img=new Image();
     if(destinationImage){
       img.src=destinationImage;
-      //console.log(img.src);
 
-      //context.drawImage(url,x,y,width,height)
       img.onload=function(){
           context.clearRect(0, 0, canvasWidth, canvasHeight);
           context.drawImage(img,0,0,canvas.width,canvas.height);
@@ -73,7 +65,38 @@ if (clickedDestination) {
       img.onerror = function () {
           console.error("Failed to load the image.");
       };
+
+      function createMap() {
+        if ("geolocation" in navigator) {
+    
+            const locatiosn = JSON.parse(localStorage.getItem("newDestinations"));
+            const destination = locatiosn.find((dest) => dest.destination == clickedDestination);
+            const latitude = destination.latitude;
+            const longitude = destination.longitude;    
+            // now we have the coordinates of the destination
+            // we can create the map
+            const mymap = L.map("map").setView([latitude, longitude], 13);
+    
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 18,
+                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>',
+            }).addTo(mymap);
+    
+            const marker = L.marker([latitude, longitude]).addTo(mymap);
+        }
+    
+        else {
+            alert("Geolocation not available");
+        }
+    }
+    
+    createMap();
+    
+
+
   }
+
+
 }
 
 
@@ -88,19 +111,9 @@ if (clickedDestination) {
 
     let img=new Image();
   
-    // img.src="/media/fructe.png";
-
-    // //context.drawImage(url,x,y,width,height)
-    // img.onload=function(){
-    // context.drawImage(img,0,0,canvas.width,canvas.height);
-    // }
-
-    // img.onerror = function () {
-    //     console.error("Failed to load the image.");
-    // };
-    // JavaScript to update the content and title based on the clicked link
+  
     const urlParams = new URLSearchParams(window.location.search);
-    // ...
+  
 
 fetch("/json_files/Reviews.json")
 .then((response) => response.json())
@@ -135,7 +148,7 @@ fetch("/json_files/Reviews.json")
       console.log("Destination not found.");
     }
 
-    // Extract and display all usernames and reviews for the destination
+
     const allReviewsElement = document.getElementById("other-reviews-input"); 
     //scz thea am schimbat asta ca aveai si clasa cu acelasi nume si creieru meu a fct scurt <3
 
@@ -213,5 +226,6 @@ fetch("/json_files/Reviews.json")
         topAttractionsElement.innerHTML += '</ul>';
     }
     
+   
     
 }
