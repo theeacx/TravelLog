@@ -28,13 +28,13 @@ if (clickedDestination) {
   const otherReviews = document.getElementById('other-reviews-input');
   const topAttractionsElement = document.getElementById("destination-top-attractions");
 
-   titleElement.textContent = diaryData.destination;
-   headingElement.textContent = `About ${diaryData.destination}`;
-   myReviewElement.textContent = `My review of ${diaryData.destination}`;
+   titleElement.textContent = diaryData.name;
+   headingElement.textContent = `About ${diaryData.name}`;
+   myReviewElement.textContent = `My review of ${diaryData.name}`;
    descriptionElement.textContent = diaryData.description;
    personalReviewElement.textContent = diaryData.review;
    otherReviews.innerHTML = `<p>RoxanaPetrescu: Loved it here, would return any time! </p> TheaLixcandru: I had a great time! Would recommend! </p> LoredanaGroza: LOVELY time here, amazing people and food! </p> `;
-   topAttractionsElement.innerHTML = `<p>${diaryData.destination}'s top attractions are:</p><ul>`;
+   topAttractionsElement.innerHTML = `<p>${diaryData.name}'s top attractions are:</p><ul>`;
 
 
 
